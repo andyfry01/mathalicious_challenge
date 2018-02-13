@@ -11,32 +11,27 @@
     </script>
     <script src="https://www.desmos.com/api/v1.0/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
     <script src='js/mlinteractives.js'></script>
+    <link rel="stylesheet" href="./scss/scrubber.css">
+    
+    <!-- Custom CSS written for challenge lives here -->
+    <link rel="stylesheet" href="./scss/challengeCSS.css">
   </head>
   <body>
     <div id='calculator' style='width:600px;height:400px;'></div>
+    <div class="ui">
+      <div class="diameterUI">
+        <span>Diameter: </span>
+        <span class="pDiameterVal"></span>
+        <span>in.</span>
+      </div>
+      <div class="crustUI">
+        <div class="crustScrubber"></div>
+      </div>
 
-    <script>
-      let test = MLI.setUpCalc('calculator', {
-        url: 'https://www.desmos.com/calculator/llxzhjmv3p',
-        graphpaper: true
-      });
-      console.log(test);
-      // console.log('test.HelperExpression');
-      // console.log(test.HelperExpression);
-      // test.setExpressions([
-      //   { id: 'tester', latex: 'x=5' },
-      // ]);
-      window.setTimeout(() => {
-        var observer = test.HelperExpression({ latex: 'u' });
-        console.log('give me the observer');
-        console.log(observer);
-        observer.observe('numericValue', function () {
-          console.log(observer.numericValue);
-        });
-        
-      }, 5000)
+    </div>
+    <script src="./js/scrubber.js"></script>
 
-    </script>
-    <!-- <script src="./test.js"></script> -->
+    <!-- Main challenge JS lives here -->
+    <script src="./js/index.js"></script>
   </body>
 </html>
