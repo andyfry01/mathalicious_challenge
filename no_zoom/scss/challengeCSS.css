@@ -14,6 +14,16 @@
   --btnOrangeInnerDeactivated: rgb(251, 213, 181);
 }
 
+header {
+  font-family: 'Source Sans Pro', sans-serif;
+  border-bottom: 2px solid black;
+  padding-left: 5rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
 .crustUI {
   height: auto;
   width: 100%;
