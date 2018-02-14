@@ -17,20 +17,59 @@
     <link rel="stylesheet" href="./scss/challengeCSS.css">
   </head>
   <body>
-    <div id='calculator' style='width:600px;height:400px;'></div>
-    <div class="ui">
-      <div class="diameterUI">
-        <span>Diameter: </span>
-        <span class="pDiameterVal"></span>
-        <span>in.</span>
-      </div>
-      <div class="crustUI">
-        <div class="crustScrubber"></div>
-      </div>
-
+    <!-- Calculators -->
+    <div class="diagramContainer">
+      <div id='pizzaDiagram' class='calculator'></div>
+      <div id='percentageGraph' class='calculator'></div>
     </div>
-    <script src="./js/scrubber.js"></script>
 
+    <!-- UI controls -->
+    <div class="ui">
+      <!-- Pizza UI -->
+      <div class="pizzaUI">
+        <!-- Pizza diameter -->
+        <div class="diameterUI">
+          <div class="uiContent">
+            <span>Diameter: {</span>
+            <span class="pizzaDiameterVal">8</span>
+            <span>} in.</span>
+          </div>
+        </div>
+        <!-- Crust thickness -->
+        <div class="crustUI">
+          <div class="uiContent">
+            <span>Crust thickness: {</span>
+            <span class="crustThicknessVal">1</span>
+            <span>} in.</span>
+            <div class="crustScrubber"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graph UI -->
+      <div class="graphUI">
+        <!-- Inside Percent UI -->
+        <div class="insidePercentUI">
+          <div class="uiContent">
+            <button class="toggleGraphLine insidePercentDeactivated">Inside Percent</button>
+            <button class="toggleEvaluator insidePercentDeactivated">
+              <img class="crosshair" src="./img/crosshair.svg" alt="crosshair"/>
+            </button>
+          </div>
+        </div>
+        <!-- Crust percent -->
+        <div class="crustPercentUI">
+          <div class="uiContent">
+            <button class="toggleGraphLine crustDeactivated">Crust Percent</button>
+            <button class="toggleEvaluator crustDeactivated">
+              <img class="crosshair" src="./img/crosshair.svg" alt="crosshair"/>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/scrubber.js"></script>
     <!-- Main challenge JS lives here -->
     <script src="./js/index.js"></script>
   </body>
